@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi App Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login">
+        <h2>Inicio de Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Iniciar Sesión</button>
+        <p id="error" style="color: red;"></p>
+    </div>
+
+    <div id="main" style="display: none;">
+        <h2>Bienvenido, <span id="nombreUsuario"></span></h2>
+        <h3>Registrar Nueva Tarea</h3>
+        <input type="text" id="codigo" placeholder="Código">
+        <input type="text" id="titulo" placeholder="Título">
+        <textarea id="descripcion" placeholder="Descripción"></textarea>
+        <input type="date" id="fechaInicio">
+        <input type="text" id="cliente" placeholder="Cliente">
+        <input type="text" id="idProyecto" placeholder="ID Proyecto">
+        <textarea id="comentarios" placeholder="Comentarios"></textarea>
+        <button onclick="registrarTarea()">Registrar Tarea</button>
+        
+        <h3>Tareas Registradas</h3>
+        <table id="tablaTareas">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Cliente</th>
+                    <th>ID Proyecto</th>
+                    <th>Comentarios</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
